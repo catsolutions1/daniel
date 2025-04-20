@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ui/main_menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/main.gd" type="Script" id=2]
+[ext_resource path="res://scripts/level_data.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+level_id = 1
+level_name = "tutorial"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_1"
+
+[node name="main" type="Node"]
+script = ExtResource( 2 )
+available_levels = [ SubResource( 1 ) ]
+
+[node name="main_ui" type="CanvasLayer" parent="."]
+
+[node name="main_menu" parent="main_ui" instance=ExtResource( 1 )]
+
+[node name="2d_scene" type="Node2D" parent="."]
