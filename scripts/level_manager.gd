@@ -5,6 +5,8 @@ var levels: Array
 var main_scene: Node2D = null
 var loaded_level: Level = null
 
+signal level_loaded
+
 func unload_level() -> void:
 	if is_instance_valid(loaded_level):
 		loaded_level.queue_free()

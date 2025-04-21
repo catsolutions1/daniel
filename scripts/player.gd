@@ -138,4 +138,4 @@ func _on_room_detector_area_entered(area: Area2D) -> void:
 	var collision_shape: CollisionShape2D = area.get_node("CollisionShape2D")
 	var size: Vector2 = collision_shape.shape.extents * 2
 	
-#	LevelManager.change_room(collision_shape.global_position, size)
+	Global.change_room(collision_shape.global_position, size)
